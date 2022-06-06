@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Route, withRouter } from "react-router-dom";
+import { React, useEffect, Route } from "components";
+import { withRouter } from "react-router-dom";
 import MenuRoutes from "../router";
 
 const Content = (props) => {
@@ -12,14 +12,12 @@ const Content = (props) => {
     }
     document.title = pageTitle ? pageTitle : "Admin Lte | React App";
   };
-
   useEffect(() => {
     setTitle(props.history.location.pathname, MenuRoutes);
     return () => {
-        setTitle(props.history.location.pathname, MenuRoutes);
+      setTitle(props.history.location.pathname, MenuRoutes);
     };
-    // eslint-disable-next-line
-  },[]);
+  });
 
   return (
     <div>

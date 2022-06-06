@@ -1,4 +1,4 @@
-import { Dashboard, DataMaster } from "pages";
+import { Dashboard, Jenis, Kategori } from "pages";
 
 const MenuRoutes = [
   {
@@ -8,11 +8,18 @@ const MenuRoutes = [
     component: () => <Dashboard />
   },
   {
-    path: "/data-master",
+    path: "/master-kategori",
     exact: true,
-    title: "Data Master",
-    component: () => <DataMaster />
+    title: "Master Kategori",
+    component: () => <Kategori />
   },
+  {
+    path: "/master-jenis",
+    exact: true,
+    title: "Master Jenis",
+    component: () => <Jenis />
+  },
+ 
 ];
 
 export default MenuRoutes;

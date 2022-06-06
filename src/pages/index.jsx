@@ -1,8 +1,9 @@
 import Dashboard from "./dashboard"
-import DataMaster from "./datamaster"
 import PageNotFound from "./404"
+import { Kategori,Jenis } from "./datamaster"
 export {
-    DataMaster,
+    Kategori,
     Dashboard,
-    PageNotFound
+    PageNotFound,
+    Jenis
 }

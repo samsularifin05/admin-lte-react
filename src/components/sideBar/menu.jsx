@@ -10,22 +10,14 @@ const menu = [
     title: "Data Master",
     children: [
       {
-        icon: "far fa-circle nav-icon",
-        path: "#",
-        title: "Laporan",
+        path: "/master-kategori",
+        title: "Kategori",
         is_show: false,
-        children: [
-          {
-            path: "#",
-            title: "Laporan Penjualan",
-            is_show: false,
-          },
-          {
-            path: "#",
-            title: "Laporan Pembelian",
-            is_show: false,
-          },
-        ]
+      },
+      {
+        path: "/master-jenis",
+        title: "Jenis",
+        is_show: false,
       },
     ]
   },
