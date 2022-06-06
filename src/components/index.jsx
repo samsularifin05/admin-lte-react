@@ -7,7 +7,11 @@ import Sidebar from "./sideBar"
 import React,{ useState,useEffect } from "react";
 import { Route, withRouter,Link } from "react-router-dom";
 import { useDispatch } from "react-redux"
+import { useSelector } from "react-redux";
+import LoadingBar from "react-top-loading-bar";
 export {
+    useSelector,
+    LoadingBar,
     useDispatch,
     Sidebar,
     PanelContent,

@@ -2347,6 +2347,11 @@ acorn@^8.2.4, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.7.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
   integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
+
 address@^1.0.1, address@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/address/-/address-1.2.0.tgz#d352a62c92fee90f89a693eccd2a8b2139ab02d9"
@@ -7367,6 +7372,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-top-loading-bar@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-top-loading-bar/-/react-top-loading-bar-2.1.0.tgz#61198174e734606056f64262da312c02414b6f36"
+  integrity sha512-07IPCC4fThfkH5PHm7d49s9UAq2rpy4RAyD+5gtwtBbBrwxkvcff7ZlbCgzrBXq8AvcGafDkpjcGdntJ4F0O9A==
+
 react@^18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"
@@ -9070,6 +9080,11 @@ yargs@^16.2.0:
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
+
+yarn@^1.22.18:
+  version "1.22.18"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.18.tgz#05b822ade8c672987bab8858635145da0850f78a"
+  integrity sha512-oFffv6Jp2+BTUBItzx1Z0dpikTX+raRdqupfqzeMKnoh7WD6RuPAxcqDkMUy9vafJkrB0YaV708znpuMhEBKGQ==
 
 yocto-queue@^0.1.0:
   version "0.1.0"

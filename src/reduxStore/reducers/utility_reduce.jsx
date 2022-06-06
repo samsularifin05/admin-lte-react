@@ -1,7 +1,8 @@
-import { ISLOADING } from "reduxStore/actions/utility_action";
+import { ISLOADING,PROGRES } from "reduxStore/actions/utility_action";
 
 const initialState = {
-  getLoading: false
+  getLoading: false,
+  getProgres : 0
 };
 
 const utility = (state = initialState, actions) => {
@@ -10,6 +11,11 @@ const utility = (state = initialState, actions) => {
       return {
         ...state,
         getLoading: actions.payload
+      };
+    case PROGRES:
+      return {
+        ...state,
+        getProgres: actions.payload
       };
     default:
       return state;

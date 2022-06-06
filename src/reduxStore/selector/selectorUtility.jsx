@@ -1,7 +1,9 @@
 const loading = (state) => state.utility.getLoading;
+const progress = (state) => state.utility.getProgres;
 
 const selectorUtility = {
-  loading
+  loading,
+  progress
 };
 
 export { selectorUtility };

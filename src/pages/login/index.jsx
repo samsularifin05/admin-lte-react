@@ -1,9 +1,10 @@
 import { Link, React, useDispatch, useEffect } from "components";
-import { actionTheme } from "reduxStore";
+import { actionTheme, utilityAction } from "reduxStore";
 import { withRouter } from "react-router-dom";
 
 const Login = (props) => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(actionTheme.handleSetPageSidebar(false));
     dispatch(actionTheme.handleSetFooter(false));
@@ -17,15 +18,13 @@ const Login = (props) => {
   }, [dispatch]);
 
   const handleSubmit = (e) => {
+    dispatch(utilityAction.setProgres());
     e.preventDefault();
-    setTimeout(() => {
-        props.history.push("/dashboard");
-        window.location.reload();
-    }, 300);
-
+    props.history.push("/dashboard");
+    window.location.reload();
   };
   return (
-    <div className="login-box container" style={{marginTop : "10%"}}>
+    <div className="login-box container" style={{ marginTop: "10%" }}>
       <div className="card card-outline card-primary">
         <div className="card-header text-center">
           <Link to="#" className="h1">
