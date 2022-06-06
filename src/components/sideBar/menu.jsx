@@ -10,9 +10,22 @@ const menu = [
     title: "Data Master",
     children: [
       {
+        icon: "far fa-circle nav-icon",
         path: "/master-supplier-berlian",
-        title: "Master Supplier Berlian",
+        title: "Laporan",
         is_show: false,
+        children: [
+          {
+            path: "#",
+            title: "Laporan Penjualan",
+            is_show: false,
+          },
+          {
+            path: "#",
+            title: "Laporan Pembelian",
+            is_show: false,
+          },
+        ]
       },
     ]
   },
