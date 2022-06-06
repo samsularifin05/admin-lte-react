@@ -11,7 +11,7 @@ const menu = [
     children: [
       {
         icon: "far fa-circle nav-icon",
-        path: "/master-supplier-berlian",
+        path: "#",
         title: "Laporan",
         is_show: false,
         children: [

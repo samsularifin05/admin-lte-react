@@ -1,4 +1,4 @@
-import { Dashboard, DataMaster, PageNotFound } from "pages";
+import { Dashboard, DataMaster } from "pages";
 
 const MenuRoutes = [
   {
@@ -13,12 +13,6 @@ const MenuRoutes = [
     title: "Data Master",
     component: () => <DataMaster />
   },
-  {
-    path: "*",
-    exact: true,
-    title: "Data Master",
-    component: () => <PageNotFound />
-  }
 ];
 
 export default MenuRoutes;
