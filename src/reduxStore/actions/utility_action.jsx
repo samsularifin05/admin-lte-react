@@ -1,4 +1,4 @@
-const ISLOADING = "ISLOADING";
+export const ISLOADING = "ISLOADING";
 
 const setLoading = (data) => {
   return (dispatch) => {
@@ -10,7 +10,6 @@ const setLoading = (data) => {
 };
 
 const utilityAction = {
-  ISLOADING,
   setLoading
 };
 

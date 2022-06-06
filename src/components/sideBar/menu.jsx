@@ -1,12 +1,13 @@
 const menu = [
   {
-    path: "/",
+    path: "/dashboard",
     icon: "nav-icon fas fa-tachometer-alt",
     title: "Dashboard",
   },
+
   {
     path: "#",
-    icon: "nav-icon fas fa-tachometer-alt",
+    icon: "nav-icon fas fa-database",
     title: "Data Master",
     children: [
       {
@@ -21,6 +22,12 @@ const menu = [
       },
     ]
   },
+  {
+    path: "/",
+    icon: "nav-icon fas fa-arrow-right-from-bracket",
+    title: "Logout",
+  },
 ];
+
 
 export default menu;

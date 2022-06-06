@@ -1,8 +1,14 @@
-import { Dashboard, Jenis, Kategori } from "pages";
+import { Dashboard, Jenis, Kategori, Login } from "pages";
 
 const MenuRoutes = [
   {
     path: "/",
+    exact: true,
+    title: "Login",
+    component: () => <Login />
+  },
+  {
+    path: "/dashboard",
     exact: true,
     title: "Dashboard",
     component: () => <Dashboard />

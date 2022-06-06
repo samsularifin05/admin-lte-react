@@ -1,4 +1,4 @@
-import { utilityAction } from "reduxStore/actions";
+import { ISLOADING } from "reduxStore/actions/utility_action";
 
 const initialState = {
   getLoading: false
@@ -6,7 +6,7 @@ const initialState = {
 
 const utility = (state = initialState, actions) => {
   switch (actions.type) {
-    case utilityAction.ISLOADING:
+    case ISLOADING:
       return {
         ...state,
         getLoading: actions.payload
