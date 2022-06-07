@@ -26,6 +26,8 @@ const SidebarNavList = (props) => {
       path={props.data.path}
       exact={props.data.exact}
       children={({ match }) => (
+        <>
+        {props.data.navheader && <li className="nav-header">{props.data.title}</li>}
         <li className="nav-item">
           {props.data.children ? (
             <Link to={props.data.path} className="nav-link">
@@ -33,12 +35,13 @@ const SidebarNavList = (props) => {
               <i className="right fas fa-angle-left"></i>
             </Link>
           ) : (
+            props.data.navheader !== true ?
             <Link to={props.data.path} className="nav-link">
               {props.submenu === "active" ? (
                 <i className="far fa-circle nav-icon"></i>
               ) : null}
               {icon} {title}
-            </Link>
+            </Link> : null
           )}
           {props.data.children && (
             <ul className="nav nav-treeview">
@@ -56,6 +59,7 @@ const SidebarNavList = (props) => {
             </ul>
           )}
         </li>
+        </>
       )}
     />
   );
