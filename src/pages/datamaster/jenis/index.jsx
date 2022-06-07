@@ -1,9 +1,9 @@
-import { PanelContent, React } from "components";
+import { Card, PanelContent, React } from "components";
 const Jenis = () => {
 
   return (
-    <PanelContent title="Data Jenis">
-        Jenis
+    <PanelContent title="Master Jenis" menu="Data Master" submenu="Jenis" headerContent>
+        <Card title="Data Jenis">ISI</Card>
     </PanelContent>
   );
 };

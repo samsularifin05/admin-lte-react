@@ -4,7 +4,11 @@ const menu = [
     icon: "nav-icon fas fa-tachometer-alt",
     title: "Dashboard",
   },
-
+  {
+    path: "/form-control",
+    icon: "nav-icon fas fa-pen-to-square",
+    title: "Form Control",
+  },
   {
     path: "#",
     icon: "nav-icon fas fa-database",

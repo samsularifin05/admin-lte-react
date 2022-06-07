@@ -1,4 +1,4 @@
-import { Dashboard, Jenis, Kategori, Login } from "pages";
+import { Dashboard, FormControl, Jenis, Kategori, Login } from "pages";
 
 const MenuRoutes = [
   {
@@ -24,6 +24,12 @@ const MenuRoutes = [
     exact: true,
     title: "Master Jenis",
     component: () => <Jenis />
+  },
+  {
+    path: "/form-control",
+    exact: true,
+    title: "Form Control",
+    component: () => <FormControl />
   },
  
 ];

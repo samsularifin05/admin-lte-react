@@ -1,13 +1,15 @@
-import { PanelContent, React,useDispatch } from "components";
-import { utilityAction } from "reduxStore";
+import { Card, PanelContent, React } from "components";
 const Kategori = () => {
-  const dispatch = useDispatch()
-  return <PanelContent title="Data Kategori">
-
-    <button onClick={()=>dispatch(utilityAction.setProgres())}> 
-        Login
-    </button>
-  </PanelContent>;
+  return (
+    <PanelContent
+      title="Master Kategori"
+      menu="Data Master"
+      submenu="Kategori"
+      headerContent
+    >
+      <Card title="Data kategori">ISI</Card>
+    </PanelContent>
+  );
 };
 
 export default Kategori;

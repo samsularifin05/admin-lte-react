@@ -18,10 +18,14 @@ const Login = (props) => {
   }, [dispatch]);
 
   const handleSubmit = (e) => {
-    dispatch(utilityAction.setProgres());
     e.preventDefault();
-    props.history.push("/dashboard");
-    window.location.reload();
+    dispatch(utilityAction.setProgres());
+    dispatch(utilityAction.setLoading(true));
+    setTimeout(() => {
+    dispatch(utilityAction.setLoading(false));
+      props.history.push("/dashboard");
+      window.location.reload();
+    }, 4000);
   };
   return (
     <div className="login-box container" style={{ marginTop: "10%" }}>

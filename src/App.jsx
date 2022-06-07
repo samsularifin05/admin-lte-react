@@ -5,9 +5,9 @@ import {
   Footer,
   React,
   LoadingBar,
-  useSelector
+  useSelector,
+  LoadingContent
 } from "components";
-
 import { selectorThemes, selectorUtility } from "reduxStore";
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
   const sidebar = useSelector(selectorThemes.handleSetPageSidebar);
   const footer = useSelector(selectorThemes.handleSetFooter);
   const progress = useSelector(selectorUtility.progress);
+  const loading = useSelector(selectorUtility.loading);
   return (
     <div>
       {header && <Header />}
@@ -23,6 +24,7 @@ const App = () => {
       {content && <Content />}
       {footer && <Footer />}
       <LoadingBar color={"red"} progress={progress} />
+      {loading && <LoadingContent />}
     </div>
   );
 };
