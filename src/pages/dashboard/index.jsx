@@ -66,10 +66,10 @@ const Dashboard = () => {
         </div>
 
         <div className="col-lg-6 col-lg-6">
-          <Card title="Data Penjualan">ISI</Card>
+          <Card title="Card 1">ISI</Card>
         </div>
         <div className="col-lg-6 col-lg-6">
-          <Card title="Data Penjualan">ISI</Card>
+          <Card title="Card 2">ISI</Card>
         </div>
       </div>
     </PanelContent>
