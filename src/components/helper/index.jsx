@@ -2,9 +2,7 @@ import LoadingBar from "react-top-loading-bar";
 import Loading from "react-fullscreen-loading";
 
 export const LoadingTopBar = (color, progress) => {
-  return(
-    <LoadingBar color={color || "red"} progress={progress} />
-  );
+  return <LoadingBar color={color || "red"} progress={progress} />;
 };
 
 export const LoadingContent = () => {
@@ -17,6 +15,10 @@ export const LoadingContent = () => {
   );
 };
 
+export const openTab = (url) => {
+  url === undefined ? alert('url is required') :
+  window.open(url);
+};
 export const ReanderField = ({
   input,
   label,
@@ -31,34 +33,51 @@ export const ReanderField = ({
   minLength,
   defaultValue,
   maxLength,
-  nouperCase,
+  noUperCase,
   textColor = "text-black",
-  meta: { touched, error, warning },
+  formGroup,
+  iconFormGroup,
+  meta: { touched, error, warning }
 }) => (
   <div className="form-group">
+    {label &&
     <label htmlFor="" className={textColor}>
       {label || <> &nbsp; </>}
     </label>
-    <input
-      onKeyPress={(event) => {
-        if (event.key === "Enter") {
-          event.preventDefault(); //<===== This stops the form from being submitted
-        } else {
+    }
+    <div className="input-group">
+      <input
+        onKeyPress={(event) => {
+          if (event.key === "Enter") {
+            event.preventDefault(); //<===== This stops the form from being submitted
+          } else {
+          }
+        }}
+        {...input}
+        tabIndex={tabIndex}
+        ref={ref}
+        autoComplete="off"
+        type={type}
+        id={id}
+        style={{ textTransform: !noUperCase ? "uppercase" : "none" }}
+        className={
+          `form-control ${touched && error && "is-invalid "} ${customeCss || ""} `
         }
-      }}
-      {...input}
-      tabIndex={tabIndex}
-      ref={ref}
-      autoComplete="off"
-      type={type}
-      id={id}
-      style={{ textTransform: !nouperCase ? "uppercase" : "none" }}
-      className={`form-control ${touched && ((error && 'is-invalid '))} ` + customeCss }
-      readOnly={readOnly}
-      minLength={minLength}
-      maxLength={maxLength}
-      placeholder={placeholder}
-    />
-    {touched && ((error && ( <span className="error invalid-feedback">{error}.</span>)) || (warning && <p>{warning}</p>))}
+        readOnly={readOnly}
+        minLength={minLength}
+        maxLength={maxLength}
+        placeholder={placeholder}
+      />
+      {formGroup && (
+        <div className="input-group-append">
+          <div className="input-group-text">
+            <span className={iconFormGroup}></span>
+          </div>
+        </div>
+      )}
+      {touched &&
+        ((error && <span className="error invalid-feedback">{error}.</span>) ||
+          (warning && <p>{warning}</p>))}
+    </div>
   </div>
 );

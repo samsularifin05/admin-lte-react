@@ -1,6 +1,7 @@
 import { Link, React, useDispatch, useEffect } from "components";
 import { actionTheme, utilityAction } from "reduxStore";
 import { withRouter } from "react-router-dom";
+import FormLogin from "./form";
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -17,8 +18,7 @@ const Login = (props) => {
     };
   }, [dispatch]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     dispatch(utilityAction.setProgres());
     dispatch(utilityAction.setLoading(true));
     setTimeout(() => {
@@ -37,39 +37,7 @@ const Login = (props) => {
         </div>
         <div className="card-body">
           <p className="login-box-msg">Sign in to start your session</p>
-          <form method="post" onSubmit={handleSubmit}>
-            <div className="input-group mb-3">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email"
-              />
-              <div className="input-group-append">
-                <div className="input-group-text">
-                  <span className="fas fa-envelope"></span>
-                </div>
-              </div>
-            </div>
-            <div className="input-group mb-3">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Password"
-              />
-              <div className="input-group-append">
-                <div className="input-group-text">
-                  <span className="fas fa-lock"></span>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12">
-                <button type="submit" className="btn btn-primary btn-block">
-                  Sign In
-                </button>
-              </div>
-            </div>
-          </form>
+          <FormLogin onSubmit={(data)=>handleSubmit(data)} />
         </div>
       </div>
     </div>

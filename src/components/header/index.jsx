@@ -1,14 +1,17 @@
-import { Link ,React} from "components";
+import { Link, React,openTab } from "components";
 
 const Header = () => {
-  const openTab = () => {
-    window.open('https://github.com/samsularifin05/admin-lte-react');
-  }
+
   return (
     <nav className="main-header navbar navbar-expand navbar-white navbar-light">
       <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link className="nav-link" data-widget="pushmenu" href="#" role="button">
+            <i className="fas fa-bars"></i>
+          </Link>
+        </li>
         <li className="nav-item d-none d-sm-inline-block">
-          <Link onClick={()=>openTab()} to="#" className="nav-link">
+          <Link onClick={() => openTab('https://github.com/samsularifin05/admin-lte-react')} to="#" className="nav-link">
             Download Project
           </Link>
         </li>

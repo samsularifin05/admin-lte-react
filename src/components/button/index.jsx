@@ -1,9 +1,28 @@
-import React from 'react'
+import { useSelector, React } from "components";
+import { selectorUtility } from "reduxStore";
 
 const Button = (props) => {
-  return (
-    <button type={props.type} className={`btn btn-${props.color} ${props.block && 'btn-block'}`}> {props.title} </button>
-  )
-}
+  const isLoading = useSelector(selectorUtility.loading);
 
-export default Button
+  return (
+    <button
+      disabled={props.loading ? (isLoading ? "disabled" : "") : ""}
+      type={props.type}
+      className={`btn btn-${props.color} ${props.block && "btn-block"}`}
+    >
+      {props.loading ? (
+        isLoading ? (
+          <>
+            <i className="fas fa-spinner fa-spin"></i> &nbsp; {props.textLoading}
+          </>
+        ) : (
+          props.title
+        )
+      ) : (
+        props.title
+      )}
+    </button>
+  );
+};
+
+export default Button;
