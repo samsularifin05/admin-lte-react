@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import MenuRoutes from "../router";
 
 const Content = (props) => {
+  
   const setTitle = (path, routeArray) => {
     var pageTitle;
     for (var i = 0; i < routeArray.length; i++) {

@@ -13,6 +13,7 @@ let FormLogin = (props) => {
       />
       <Field
         name="password"
+        type="password"
         component={ReanderField}
         placeholder="Silahkan Masukan Passwsord"
         iconFormGroup="fas fa-lock"
