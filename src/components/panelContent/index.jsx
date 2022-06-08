@@ -1,21 +1,13 @@
-import { React } from "components";
-import HeaderContent from "./headerContent";
+import PanelContent from "./panelContent"
+import Card from "./card"
+import HeaderContent from "./headerContent"
+import Row from "./row"
+import Col from "./col"
 
-const PanelContent = (props) => {
-  return (
-    <div className="content-wrapper">
-      {props.headerContent && (
-        <HeaderContent
-          title={props.title}
-          menu={props.menu}
-          submenu={props.submenu}
-        />
-      )}
-      <section className="content">
-        <div className="container-fluid">{props.children}</div>
-      </section>
-    </div>
-  );
-};
-
-export default PanelContent;
+export {
+  Col,
+  PanelContent,
+  Card,
+  HeaderContent,
+  Row
+}

@@ -1,4 +1,4 @@
-import { ReanderField, React, Field, Button } from "components";
+import { ReanderField, React, Field, Button, Row, Col } from "components";
 import { reduxForm } from "redux-form";
 import Validate from "../validate";
 let FormLogin = (props) => {
@@ -19,11 +19,11 @@ let FormLogin = (props) => {
         iconFormGroup="fas fa-lock"
         formGroup
       />
-      <div className="row">
-        <div className="col-12">
+      <Row>
+        <Col size="12">
           <Button loading textLoading="Waiting" type="submit" color="primary" block title="Sign In" />
-        </div>
-      </div>
+        </Col>
+      </Row>
     </form>
   );
 };

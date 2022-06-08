@@ -5,6 +5,8 @@ import {
   Card,
   Button,
   ReanderSelect,
+  Row,
+  Col
 } from "components";
 import { reduxForm } from "redux-form";
 import Validate from "../validate";
@@ -12,16 +14,16 @@ let FormInput = (props) => {
   return (
     <Card title="Form Submit">
       <form onSubmit={props.handleSubmit}>
-        <div className="row">
-          <div className="col-4">
+        <Row>
+          <Col size="3">
             <Field
               name="username"
               component={ReanderField}
               label="Username"
               placeholder="Silahkan Masukan Username"
             />
-          </div>
-          <div className="col-4">
+          </Col>
+          <Col size="3">
             <Field
               name="password"
               component={ReanderField}
@@ -29,30 +31,30 @@ let FormInput = (props) => {
               type="password"
               placeholder="Silahkan Masukan Password"
             />
-          </div>
-          <div className="col-4">
+          </Col>
+          <Col size="3">
             <Field
               name="level"
               component={ReanderSelect}
               label="Level"
               options={[
                 {
-                  label : "Owner",
-                  value : "Owner"
+                  label: "Owner",
+                  value: "Owner"
                 },
                 {
-                  label : "Admin",
-                  value : "Admin"
+                  label: "Admin",
+                  value: "Admin"
                 }
               ]}
               placeholder="Silahkan Pilih Level"
             />
-          </div>
-          <div className="col-4 mt-2">
+          </Col>
+          <Col size="3" className="mt-2">
             <br />
             <Button type="submit" color="primary" block title="Kirim" />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </form>
     </Card>
   );
@@ -60,6 +62,6 @@ let FormInput = (props) => {
 FormInput = reduxForm({
   form: "FormInput",
   enableReinitialize: true,
-  validate : Validate
+  validate: Validate
 })(FormInput);
 export default FormInput;
