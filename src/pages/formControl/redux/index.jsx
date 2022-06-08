@@ -6,7 +6,7 @@ const handleSubmit = (data) => {
     dispatch(utilityAction.setLoading(true));
 
     setTimeout(() => {
-        alert(`Field 1 ${data.field_1} \nField 2 ${data.field_2}`)
+        alert(`Username ${data.username} \nLevel ${data.level.value}`)
         dispatch(utilityAction.setLoading(false));
     }, 5000);
   };

@@ -4,6 +4,7 @@ import {
   Field,
   Card,
   Button,
+  ReanderSelect,
 } from "components";
 import { reduxForm } from "redux-form";
 import Validate from "../validate";
@@ -14,18 +15,37 @@ let FormInput = (props) => {
         <div className="row">
           <div className="col-4">
             <Field
-              name="field_1"
+              name="username"
               component={ReanderField}
-              label="Field 1"
-              placeholder="Silahkan Masukan Field 1"
+              label="Username"
+              placeholder="Silahkan Masukan Username"
             />
           </div>
           <div className="col-4">
             <Field
-              name="field_2"
+              name="password"
               component={ReanderField}
-              label="FIELD 2"
-              placeholder="Silahkan Masukan Field 2"
+              label="Password"
+              type="password"
+              placeholder="Silahkan Masukan Password"
+            />
+          </div>
+          <div className="col-4">
+            <Field
+              name="level"
+              component={ReanderSelect}
+              label="Level"
+              options={[
+                {
+                  label : "Owner",
+                  value : "Owner"
+                },
+                {
+                  label : "Admin",
+                  value : "Admin"
+                }
+              ]}
+              placeholder="Silahkan Pilih Level"
             />
           </div>
           <div className="col-4 mt-2">

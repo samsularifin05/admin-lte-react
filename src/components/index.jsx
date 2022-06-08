@@ -11,12 +11,13 @@ import { useSelector } from "react-redux";
 import LoadingBar from "react-top-loading-bar";
 import HeaderContent from "./panelContent/headerContent"
 import Card from "./panelContent/card"
-import { LoadingContent, LoadingTopBar, openTab, ReanderField } from "./helper"
+import { LoadingContent, LoadingTopBar, openTab, ReanderField, ReanderSelect } from "./helper"
 import { connect } from "react-redux";
 import { Field } from "redux-form";
 import Button from "./button"
 import { reduxForm } from "redux-form";
 export {
+    ReanderSelect,
     openTab,
     Field,
     Button,

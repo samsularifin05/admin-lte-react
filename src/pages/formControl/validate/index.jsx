@@ -1,10 +1,13 @@
 const Validate = (value) => {
   const errors = {};
-  if (!value.field_1) {
-    errors.field_1 = "Field 1 Harus Diisi";
+  if (!value.username) {
+    errors.username = "Username is required";
   }
-  if (!value.field_2) {
-    errors.field_2 = "Field 1 Harus Diisi";
+  if (!value.password) {
+    errors.password = "Password is required";
+  }
+  if (!value.level) {
+    errors.level = "Level is required";
   }
   return errors;
 };

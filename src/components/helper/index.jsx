@@ -1,5 +1,6 @@
 import LoadingBar from "react-top-loading-bar";
 import Loading from "react-fullscreen-loading";
+import Select from 'react-select';
 
 export const LoadingTopBar = (color, progress) => {
   return <LoadingBar color={color || "red"} progress={progress} />;
@@ -79,5 +80,55 @@ export const ReanderField = ({
         ((error && <span className="error invalid-feedback">{error}.</span>) ||
           (warning && <p>{warning}</p>))}
     </div>
+  </div>
+);
+
+
+
+export const ReanderSelect = ({
+  input,
+  label,
+  readOnly,
+  placeholder,
+  options,
+  onChange,
+  id,
+  disabled,
+  tabIndex,
+  meta: { touched, error, warning },
+  value,
+  textColor = "text-black",
+}) => (
+  <div className="form-group">
+    <label htmlFor="" className={textColor}>
+      {label}
+    </label>
+    <Select
+    {...input}
+      id={id}
+      readOnly={readOnly}
+      onChange={value => input.onChange(value)}
+      onBlur={() => input.onBlur(input.value)}
+      tabIndex={tabIndex}
+      placeholder={placeholder}
+      isDisabled={disabled}
+      options={options}
+      styles={{
+        control: (base,state) => ({
+          ...base,
+          border: touched && error && '1px solid red',
+          boxShadow: "none",
+          '&:hover': {
+            border: touched && error &&'1px solid red',
+            boxShadow: "none"
+          }
+        }),
+        // Fixes the overlapping problem of the component
+        menu: provided => ({ ...provided, zIndex: 9999 })
+      }}
+    />
+  {touched &&
+        ((error && <span className="error invalid-feedback">{error}.</span>) ||
+          (warning && <p>{warning}</p>))}
   </div>
 );
