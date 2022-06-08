@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && REACT_APP_KEY=production",
+    "build": "react-scripts build && export REACT_APP_KEY=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
