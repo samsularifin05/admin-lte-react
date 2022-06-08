@@ -18,7 +18,7 @@ const Header = () => {
       </ul>
 
       <ul className="navbar-nav ml-auto">
-        {/* <li className="nav-item">
+        <li className="nav-item">
           <Link
             className="nav-link"
             data-widget="navbar-search"
@@ -28,7 +28,7 @@ const Header = () => {
             <i className="fas fa-search"></i>
           </Link>
           <div className="navbar-search-block">
-            <form className="form-inline" onSubmit={handleSubmit}>
+            <form className="form-inline">
               <div className="input-group input-group-sm">
                 <input
                   className="form-control form-control-navbar"
@@ -51,9 +51,9 @@ const Header = () => {
               </div>
             </form>
           </div>
-        </li> */}
+        </li>
         {/* Start Chat */}
-        {/* <li className="nav-item dropdown">
+        <li className="nav-item dropdown">
           <Link className="nav-link" data-toggle="dropdown" to="#">
             <i className="far fa-comments"></i>
             <span className="badge badge-danger navbar-badge">3</span>
@@ -129,10 +129,10 @@ const Header = () => {
               See All Messages
             </Link>
           </div>
-        </li> */}
+        </li>
         {/* End Chat */}
         {/* Notification */}
-        {/* <li className="nav-item dropdown">
+        <li className="nav-item dropdown">
           <Link className="nav-link" data-toggle="dropdown" to="#">
             <i className="far fa-bell"></i>
             <span className="badge badge-warning navbar-badge">15</span>
@@ -161,7 +161,7 @@ const Header = () => {
               See All Notifications
             </Link>
           </div>
-        </li> */}
+        </li>
         {/* End Notification */}
 
         <li className="nav-item">
