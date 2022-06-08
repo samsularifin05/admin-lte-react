@@ -1,5 +1,4 @@
 import { Dashboard, FormControl, Jenis, Kategori, Login } from "pages";
-
 const MenuRoutes = [
   {
     path: "/login",
