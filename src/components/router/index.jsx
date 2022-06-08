@@ -2,13 +2,13 @@ import { Dashboard, FormControl, Jenis, Kategori, Login } from "pages";
 
 const MenuRoutes = [
   {
-    path: "/",
+    path: "/login",
     exact: true,
     title: "Login",
     component: () => <Login />
   },
   {
-    path: "/dashboard",
+    path: "/",
     exact: true,
     title: "Dashboard",
     component: () => <Dashboard />
