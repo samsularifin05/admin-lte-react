@@ -1,4 +1,4 @@
-import { Link, React, useDispatch, useEffect } from "components";
+import { React, useDispatch, useEffect } from "components";
 import { actionTheme, utilityAction } from "reduxStore";
 import { withRouter } from "react-router-dom";
 import FormLogin from "./form";
@@ -31,9 +31,9 @@ const Login = (props) => {
     <div className="login-box container" style={{ marginTop: "10%" }}>
       <div className="card card-outline card-primary">
         <div className="card-header text-center">
-          <Link to="#" className="h1">
+          <div className="h1">
             <b>Admin</b>LTE
-          </Link>
+          </div>
         </div>
         <div className="card-body">
           <p className="login-box-msg">Sign in to start your session</p>
