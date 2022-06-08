@@ -16,8 +16,8 @@ let FormInput = (props) => {
             <Field
               name="field_1"
               component={ReanderField}
-              label="FIELD 1"
-              placeholder="SILAHKAN MASUKAN FIELD 1"
+              label="Field 1"
+              placeholder="Silahkan Masukan Field 1"
             />
           </div>
           <div className="col-4">
@@ -25,7 +25,7 @@ let FormInput = (props) => {
               name="field_2"
               component={ReanderField}
               label="FIELD 2"
-              placeholder="SILAHKAN MASUKAN FIELD 2"
+              placeholder="Silahkan Masukan Field 2"
             />
           </div>
           <div className="col-4 mt-2">
