@@ -9,16 +9,14 @@ let FormLogin = (props) => {
         component={ReanderField}
         iconFormGroup="fas fa-envelope"
         formGroup
-        noUperCase
-        placeholder="SILAHKAN MASUKAN USERNAME"
+        placeholder="Silahkan Masukan Username"
       />
       <Field
         name="password"
         component={ReanderField}
-        placeholder="SILAHKAN MASUKAN PASSWORD"
+        placeholder="Silahkan Masukan Passwsord"
         iconFormGroup="fas fa-lock"
         formGroup
-        noUperCase
       />
       <div className="row">
         <div className="col-12">

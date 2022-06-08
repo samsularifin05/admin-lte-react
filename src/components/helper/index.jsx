@@ -33,7 +33,7 @@ export const ReanderField = ({
   minLength,
   defaultValue,
   maxLength,
-  noUperCase,
+  uppercase,
   textColor = "text-black",
   formGroup,
   iconFormGroup,
@@ -59,7 +59,7 @@ export const ReanderField = ({
         autoComplete="off"
         type={type}
         id={id}
-        style={{ textTransform: !noUperCase ? "uppercase" : "none" }}
+        style={{ textTransform: uppercase ? "uppercase" : "none" }}
         className={
           `form-control ${touched && error && "is-invalid "} ${customeCss || ""} `
         }
