@@ -9,7 +9,6 @@ import {
   LoadingContent
 } from "components";
 import { selectorThemes, selectorUtility } from "reduxStore";
-
 const App = () => {
   const content = useSelector(selectorThemes.handleSetContent);
   const header = useSelector(selectorThemes.handleSetPageHeader);

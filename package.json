@@ -24,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && export REACT_APP_KEY=production",
+    "buildgit": "react-scripts build && export REACT_APP_KEY=production  && sh ./script.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

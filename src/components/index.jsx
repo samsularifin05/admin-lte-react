@@ -20,7 +20,14 @@ import { connect } from "react-redux";
 import { Field } from "redux-form";
 import Button from "./button";
 import { reduxForm } from "redux-form";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+
 export {
+  Provider,
+  BrowserRouter,
+  ReactDOM,
   Row,
   Col,
   ReanderSelect,
