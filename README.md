@@ -1,5 +1,5 @@
 Admin Lte React
-<a href="https://calm-granita-cb8b8e.netlify.app/"> Demo </a>
+<a href="https://react-adminlte.netlify.app/"> Demo </a>
 <img src="ss1.png">
 
 
