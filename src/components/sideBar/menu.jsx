@@ -81,6 +81,4 @@ const menu = [
     title: "Logout",
   },
 ];
-
-
 export default menu;
