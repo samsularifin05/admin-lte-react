@@ -6,6 +6,7 @@ const SidebarNavList = (props) => {
   const titlesub = props.data.title && (
     <p>
       {props.data.title} {label}
+      <i className="right fas fa-angle-left"></i>
     </p>
   );
   const title = props.data.title && (
@@ -32,7 +33,7 @@ const SidebarNavList = (props) => {
           {props.data.children ? (
             <Link to={props.data.path} className="nav-link">
               {icon} {titlesub}
-              <i className="right fas fa-angle-left"></i>
+             
             </Link>
           ) : (
             props.data.navheader !== true ?
