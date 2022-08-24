@@ -2,16 +2,15 @@ import { Link, Route, React, useState } from "components";
 
 const SidebarNavList = (props) => {
   const icon = props.data.icon && <i className={props.data.icon}></i>;
-  const label = props.data.label && <span>{props.data.label}</span>;
   const titlesub = props.data.title && (
     <p>
-      {props.data.title} {label}
+      {props.data.title} 
       <i className="right fas fa-angle-left"></i>
     </p>
   );
   const title = props.data.title && (
     <p>
-      {props.data.title} {label}
+      {props.data.title} 
     </p>
   );
 
