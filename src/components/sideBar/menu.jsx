@@ -4,11 +4,7 @@ const menu = [
     icon: "nav-icon fas fa-tachometer-alt",
     title: "Dashboard",
   },
-  {
-    path: "/form-control",
-    icon: "nav-icon fas fa-pen-to-square",
-    title: "Form Control",
-  },
+
   {
     navheader : true,
     title: "MULTI LEVEL EXAMPLE",
@@ -64,13 +60,19 @@ const menu = [
     title: "Demo Page",
     children: [
       {
-        path: "/master-kategori",
-        title: "Kategori",
+        path: "/demo-tabel",
+        title: "Demo Tabel",
         is_show: false,
       },
       {
-        path: "/master-jenis",
-        title: "Jenis",
+        path: "/form-control",
+        title: "Form Control",
+        is_show: false,
+
+      },
+      {
+        path: "/404",
+        title: "Page Not Found",
         is_show: false,
       },
     ]

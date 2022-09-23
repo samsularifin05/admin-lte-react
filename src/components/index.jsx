@@ -11,10 +11,9 @@ import LoadingBar from "react-top-loading-bar";
 import { Card, Col,PanelContent, Row, HeaderContent } from "./panelContent";
 import {
   LoadingContent,
-  LoadingTopBar,
   openTab,
   ReanderField,
-  ReanderSelect
+  ReanderSelect,
 } from "./helper";
 import { connect } from "react-redux";
 import { Field } from "redux-form";
@@ -23,8 +22,11 @@ import { reduxForm } from "redux-form";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-
+import ModalGlobal from "./helper/ModalGlobal";
+import TabelMaster from "./helper/TabelMaster";
 export {
+  ModalGlobal,
+  TabelMaster,
   Provider,
   BrowserRouter,
   ReactDOM,
@@ -35,7 +37,6 @@ export {
   Field,
   Button,
   connect,
-  LoadingTopBar,
   LoadingContent,
   reduxForm,
   ReanderField,

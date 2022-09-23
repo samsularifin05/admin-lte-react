@@ -1,11 +1,41 @@
 export const ISLOADING = "ISLOADING";
 export const PROGRES = "PROGRES";
+export const OPEN_MODAL = "OPEN_MODAL";
 
-const setLoading = (data) => {
+const modalShow = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: OPEN_MODAL,
+      payload: {
+        isModalShow: data.isModalShow,
+        isEdit: data.isEdit,
+        data: data.data
+      }
+    });
+  };
+};
+
+const modalHide = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: OPEN_MODAL,
+      payload: {
+        isModalShow: false,
+        isEdit: false,
+        data: []
+      }
+    });
+  };
+};
+const setLoading = (status) => {
   return (dispatch) => {
     dispatch({
       type: ISLOADING,
-      payload: data
+      payload: {
+        content: status?.content ? true : false,
+        button: status?.button ? true : false,
+        tabel: status?.tabel ? true : false
+      }
     });
   };
 };
@@ -33,10 +63,25 @@ const setProgres = (data) => {
     }
   };
 };
+const stopLoading = () => {
+  return (dispatch) => {
+    dispatch({
+      type: ISLOADING,
+      payload: {
+        content: false,
+        button: false,
+        tabel: false
+      }
+    });
+  };
+};
 
 const utilityAction = {
   setLoading,
-  setProgres
+  setProgres,
+  modalShow,
+  modalHide,
+  stopLoading
 };
 
 export { utilityAction };

@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "ant-table-extensions": "^1.1.7",
     "antd": "^4.23.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -20,6 +21,7 @@
     "redux-form": "^8.3.8",
     "redux-form-input-masks": "^2.0.2",
     "redux-thunk": "^2.4.1",
+    "sweetalert2": "^11.4.33",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
