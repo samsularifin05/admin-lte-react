@@ -1,4 +1,7 @@
+import { Skeleton } from "antd";
 import { React, useEffect, Route } from "components";
+import { PageNotFound } from "pages";
+import { Suspense } from "react";
 import { withRouter } from "react-router-dom";
 import MenuRoutes from "../router";
 
@@ -21,18 +24,15 @@ const Content = (props) => {
   });
 
   return (
-    <div>
-      {MenuRoutes.map((route, index) => {
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.component}
-          />
-        );
-      })}
-    </div>
+    <Suspense fallback={<Skeleton width={'100%'} height={1000} />}>
+    {MenuRoutes.find((list) => list.path === props.history.location.pathname) === undefined ? (
+      <Route component={() => <PageNotFound />} />
+    ) : (
+      MenuRoutes.map((route, index) => (
+        <Route key={index} exact={route.exact} path={route.path} component={route?.component} />
+      ))
+    )}
+  </Suspense>
   );
 };
 

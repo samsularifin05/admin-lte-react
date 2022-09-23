@@ -1,8 +1,8 @@
 import { PanelContent, Link, React } from "components";
 const PageNotFound = () => {
   return (
-    <PanelContent>
-      <div className="error-page">
+    <PanelContent headerContent>
+      <div className="error-page" style={{marginTop : "170px"}}>
         <h2 className="headline text-warning"> 404</h2>
         <div className="error-content">
           <h3>
