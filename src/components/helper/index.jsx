@@ -1,8 +1,9 @@
 import Loading from "react-fullscreen-loading";
 import Select from "react-select";
 import Swal from "sweetalert2";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { doDecrypt, doEncrypt } from "./Encrypt";
+import { Logo } from "assets";
 // import EmptyTable from "./emptyTable";
 
 export const LoadingContent = () => {
@@ -13,6 +14,68 @@ export const LoadingContent = () => {
       loaderColor="rgba(94, 147, 117, 1)"
     />
   );
+};
+
+export const addWindowClass = (classList) => {
+  const window = document && document.getElementById("root");
+  if (window) {
+    // @ts-ignore
+    window.classList.add(classList);
+  }
+};
+
+export const calculateWindowSize = (windowWidth) => {
+  if (windowWidth >= 1200) {
+    return "lg";
+  }
+  if (windowWidth >= 992) {
+    return "md";
+  }
+  if (windowWidth >= 768) {
+    return "sm";
+  }
+  return "xs";
+};
+
+export const LoadingApp = () => {
+  return (
+    <div className="preloader flex-column justify-content-center align-items-center">
+      <img
+        className="animation__shake"
+        src={Logo}
+        alt="AdminLTELogo"
+        height="60"
+        width="60"
+      />
+    </div>
+  );
+};
+
+export const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+};
+
+export const removeWindowClass = (classList) => {
+  const window = document && document.getElementById("root");
+  if (window) {
+    // @ts-ignore
+    window.classList.remove(classList);
+  }
 };
 
 export const openTab = (url) => {

@@ -29,7 +29,6 @@ const Login = (props) => {
     setTimeout(() => {
       dispatch(utilityAction.stopLoading());
       props.history.push("/dashboard");
-      window.location.reload();
     }, 4000);
   };
   return (

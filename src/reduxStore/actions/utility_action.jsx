@@ -1,6 +1,27 @@
+import { calculateWindowSize } from "components";
+
 export const ISLOADING = "ISLOADING";
 export const PROGRES = "PROGRES";
 export const OPEN_MODAL = "OPEN_MODAL";
+export const SCREEN = "SCREEN";
+export const SIDEBAR_TOOGLE = "SIDEBAR_TOOGLE";
+
+const toggleSidebarMenu = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: SIDEBAR_TOOGLE,
+      payload: data
+    });
+  };
+};
+const screenSize = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: SCREEN,
+      payload: calculateWindowSize(window.innerWidth)
+    });
+  };
+};
 
 const modalShow = (data) => {
   return (dispatch) => {
@@ -81,7 +102,9 @@ const utilityAction = {
   setProgres,
   modalShow,
   modalHide,
-  stopLoading
+  stopLoading,
+  screenSize,
+  toggleSidebarMenu
 };
 
 export { utilityAction };
