@@ -39,8 +39,7 @@ const App = () => {
       addWindowClass("sidebar-closed");
       addWindowClass("sidebar-collapse");
     }
-    // eslint-disable-next-line
-  }, [windowSize, menuSidebarCollapsed, dispatch]);
+  }, [windowSize, menuSidebarCollapsed, dispatch, screenSize]);
 
   const content = useSelector(selectorThemes.handleSetContent);
   const header = useSelector(selectorThemes.handleSetPageHeader);
