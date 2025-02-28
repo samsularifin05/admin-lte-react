@@ -1,5 +1,5 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "./adminlte.css";
-@import "./OverlayScrollbars.css";
 
 .loading-background {
   z-index: 9999 !important;
@@ -14,6 +14,12 @@
 .avatarProfile {
   width: 40px;
   height: 40px;
+}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
 }
 
 .form-control.is-invalid,
@@ -100,4 +106,21 @@
 
 input.password-hide-css {
   -webkit-text-security: disc;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2); /* Warna transparan */
+  backdrop-filter: blur(10px); /* Efek blur */
+  -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+  border-radius: 10px; /* Membuat sudut melengkung */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  /* padding: 20px; */
+}
+
+.nav-treeview {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }

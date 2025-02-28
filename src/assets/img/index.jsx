@@ -1,5 +1,3 @@
-import Logo from "./AdminLTELogo.png"
+import Logo from "./react.svg";
 
-export {
-    Logo
-}
+export { Logo };
